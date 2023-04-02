@@ -27,7 +27,7 @@ namespace BaseProject
 
             identityDbContext.Database.Migrate();
 
-            if (!userManager.Users.Any())
+            if (!userManager.Users.Any())//Seed datalar program ayaða kalkýnca oluþur.
             {
                 userManager.CreateAsync(new AppUser() { UserName = "user1", Email = "user1@outlook.com" }, "Password12*").Wait();
                 userManager.CreateAsync(new AppUser() { UserName = "user2", Email = "user2@outlook.com" }, "Password12*").Wait();
